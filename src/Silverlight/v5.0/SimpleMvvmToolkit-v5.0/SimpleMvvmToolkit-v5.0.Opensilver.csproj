@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<DefineSilverlight>true</DefineSilverlight>
+		<RootNamespace>SimpleMvvmToolkit</RootNamespace>
+		<AssemblyName>SimpleMvvmToolkit-SL5</AssemblyName>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<!--<PropertyGroup>
+		<SignAssembly>true</SignAssembly>
+	</PropertyGroup>-->
+	<PropertyGroup>
+		<AssemblyOriginatorKeyFile>SimpleMvvm.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="IServiceAgentMetadata.cs" />
+		<Compile Include="MessageBus.cs" />
+		<Compile Include="ModelBase.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Compile Include="ServiceAgentExportAttribute.cs" />
+		<Compile Include="UIDispatcher.cs" />
+		<Compile Include="ViewModelExtensions.cs" />
+		<Compile Include="ViewModelBase.cs" />
+		<Compile Include="ViewModelDetailBase.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Common\SimpleMvvmToolkit-Common\SimpleMvvmToolkit-Common.Opensilver.csproj">
+			<Project>{26130f6a-c169-4f74-af94-21afbc53326b}</Project>
+			<Name>SimpleMvvmToolkit-Common</Name>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="SimpleMvvm.snk" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="OpenSilver" Version="3.3.0-preview-2025-07-22-095449-67171cc1" />
+	</ItemGroup>
+</Project>
